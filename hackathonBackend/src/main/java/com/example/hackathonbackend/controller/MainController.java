@@ -35,4 +35,15 @@ public class MainController {
         model.addAttribute("courses", courseRepository.findAll());
         return "softdev.html";
     }
+
+    @RequestMapping("/homepage")
+    public String homepage(Model model) {
+        return "homepage.html";
+    }
+
+    //temporary 
+    @RequestMapping("/cppPage")
+    public String cppPage() {
+        return "cHtml.html";
+    }
 }
