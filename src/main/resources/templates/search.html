@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <h2>Search for course</h2>
+        <form th:action="@{/searchCourses}" method="get">
+            <label for="query">Search:</label>
+            <input type="text" id="query" name="query" placeholder="Enter course name or keyword">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Display Search Results -->
+        <div th:if="${courses != null}">
+            <h2>Search Results</h2>
+            <ul>
+                <li th:each="course : ${courses}">
+                    <span th:text="${course.title}"></span> - <span th:text="${course.description}"></span>
+                    <br><br>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Display Message if No Results Found -->
+        <div th:if="${courses==null}">
+            <p>No courses found for your query.</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Tutoring</title>
+    </head>
+    <body>
+        <div class="navbar">
+         <a>Homepage</a>
+         <a>Profile</a>
+        </div>
+        <div>
+            <p>Tutoring</p>
+        </div>
+        <div>
+            <h3>Here are some courses that could help you!</h3>
+
+            <div th:each="course,cStat:${courses}" class="course-container">
+
+                <br><br>
+
+                <div class="course">
+                    <span th:text="${course.title}"/>
+                    <br>
+                    <span th:text="${course.description}"/>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
