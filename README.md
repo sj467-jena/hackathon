@@ -1,4 +1,5 @@
-Team members: Neha Karia
+Team members: Neha Karia, Sneha Purushothama, Sudhanya jena
+
 # hackathon
 
 alowing ppl to earn experian and market their solutions
